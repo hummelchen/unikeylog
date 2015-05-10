@@ -1,0 +1,10 @@
+*.o
+bin
+build
+*.so
+*.exe
+
+*.pem
+parser.lua
+log.*
+config.h
