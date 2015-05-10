@@ -38,10 +38,13 @@ Parse log:
 ```bash
 $ luajit parser.lua < log.Sun_May_10_08-51-01_2015
 ls
-<Shift_R>This keylogger runs without rot<BackSpace>ot access, but in can intercept root or sudo password
+<Shift_R>This keylogger runs without rot<BackSpace>ot access, 
+but in can intercept root or sudo password
 su
 123456
-<Shift_R>Also, we can yo<BackSpace><BackSpace>use other layouts, for example, <Shift_R>Russian. <Shift_R>Проверка работы русской раскладки.
+<Shift_R>Also, we can yo<BackSpace><BackSpace>
+use other layouts, for example, <Shift_R>Russian. 
+<Shift_R>Проверка работы русской раскладки.
 ```
 
 ## Legal
