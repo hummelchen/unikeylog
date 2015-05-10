@@ -10,3 +10,6 @@ before_install:
 install:
   - KEYLOGGER_MODE=X11 $LUAJIT build.lua
   - KEYLOGGER_MODE=DEV $LUAJIT build.lua
+
+script:
+  - echo "No tests yet"
