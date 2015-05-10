@@ -1,0 +1,11 @@
+language: c
+
+before_install:
+  - echo 'deb http://ftp.debian.org/debian/ wheezy-backports main' | sudo tee /etc/apt/sources.list.d/wheezy-backports.list
+  - sudo apt-get update
+  - sudo apt-get install luajit
+  - sudo apt-get install openssl libssl-dev
+
+install:
+  - KEYLOGGER_MODE=X11 luajit build.lua
+  - KEYLOGGER_MODE=DEV luajit build.lua
