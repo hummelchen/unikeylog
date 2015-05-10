@@ -5,7 +5,8 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install luajit
   - sudo apt-get install openssl libssl-dev
+  - LUAJIT=`echo /usr/bin/luajit-*`
 
 install:
-  - KEYLOGGER_MODE=X11 luajit build.lua
-  - KEYLOGGER_MODE=DEV luajit build.lua
+  - KEYLOGGER_MODE=X11 $LUAJIT build.lua
+  - KEYLOGGER_MODE=DEV $LUAJIT build.lua
