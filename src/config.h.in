@@ -1,0 +1,8 @@
+#ifndef KEYLOGGER_CONFIG_H_
+#define KEYLOGGER_CONFIG_H_
+
+#define KEYLOGGER_MODE_%s
+#define PUBKEY %s
+#define LOGFILE %q
+
+#endif

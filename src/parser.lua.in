@@ -1,0 +1,35 @@
+local PRIVKEY = %q
+local MODE = %q
+
+local crypto = require 'crypto'
+
+local decryptor = crypto.initDecryption(PRIVKEY)
+local header_length = decryptor:headerLength()
+decryptor:readHeader(io.read(header_length))
+
+local function binaryToInt(n)
+    local a, b, c, d = n:byte(1, 4)
+    return d * 256^3 + c * 256^2 + b * 256 + a
+end
+
+while true do
+    local keysym_enc = io.stdin:read(4)
+    if not keysym_enc then
+        break
+    end
+    local keysym = decryptor:readData(keysym_enc)
+    keysym = binaryToInt(keysym)
+    local text
+    if MODE == 'X11' then
+        local keysym2text = require 'keysym2text'
+        text = keysym2text(keysym)
+    elseif MODE == 'DEV' then
+        local devcode2text = require 'devcode2text'
+        text = devcode2text(keysym)
+    end
+    if text == '<Return>' then
+        text = '\n'
+    end
+    io.stdout:write(text)
+end
+io.stdout:write('\n')
