@@ -1,5 +1,8 @@
 # Unikeylog - multifunctional keylogger for Linux systems
 
+[![Travis build][travis-badge]][travis-page]
+[![License][license-badge]][license-page]
+
 ## Features:
  - X11 key logging (doesn't require root)
  - /dev/input key logging (requires root)
@@ -68,3 +71,8 @@ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
+
+[travis-page]: https://travis-ci.org/hummelchen/unikeylog
+[travis-badge]: https://travis-ci.org/hummelchen/unikeylog.png
+[license-page]: LICENSE
+[license-badge]: http://img.shields.io/badge/License-MIT-brightgreen.png
