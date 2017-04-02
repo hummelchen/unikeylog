@@ -1,4 +1,4 @@
-# Unikeylog - multifunctional keylogger for Linux systems
+# Unikeylog - multifunctional keylogger for Linux
 
 [![Travis build][travis-badge]][travis-page]
 [![License][license-badge]][license-page]
